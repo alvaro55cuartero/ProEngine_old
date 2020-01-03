@@ -5,7 +5,10 @@
 extern Pro::Application* Pro::CreateApplication();
 
 void main(int argc, char** argv) {
-	printf("ProEngine");
+	Pro::Log::init();
+	PRO_CORE_INFO("ProEngine Running");
+	PRO_INFO("App Running");
+
 	auto app = Pro::CreateApplication();
 	app->Run();
 	delete app;

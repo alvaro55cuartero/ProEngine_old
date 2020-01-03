@@ -1,5 +1,6 @@
 #pragma once
-#include "Core.h"
+#include "Pro/Core.h"
+#include "Pro/events/Event.h"
 
 namespace Pro {
 
