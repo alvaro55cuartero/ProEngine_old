@@ -1,4 +1,5 @@
-#include "Log.h"
+#include "propch.h"
+#include "Pro/Log.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
  
 namespace Pro {

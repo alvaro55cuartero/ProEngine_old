@@ -1,9 +1,14 @@
 -- premake5.lua
-workspace "PorEngine"
+workspace "ProEngine"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "ProEngine/vendor/GLFW/include"
+
+include "ProEngine/vendor/GLFW"
 
 project "ProEngine"
    location "ProEngine"
@@ -12,12 +17,21 @@ project "ProEngine"
    
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+   pchheader "propch.h"
+   pchsource "ProEngine/src/propch.cpp"
    
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
 
    includedirs {
       "%{prj.name}/src",
-      "%{prj.name}/vendor/spdlog/include"
+      "%{prj.name}/vendor/spdlog/include",
+      "%{IncludeDir.GLFW}"
+   }
+
+   links {
+      "GLFW",
+      "opengl32.lib"
    }
 
    filter "system:windows"

@@ -34,6 +34,9 @@
     <ClInclude Include="src\Pro\events\MouseEvent.h">
       <Filter>Pro\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\propch.h" />
+    <ClInclude Include="src\Pro\Window.h" />
+    <ClInclude Include="src\platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pro\Application.cpp">
@@ -42,5 +45,7 @@
     <ClCompile Include="src\Pro\Log.cpp">
       <Filter>Pro</Filter>
     </ClCompile>
+    <ClCompile Include="src\propch.cpp" />
+    <ClCompile Include="src\platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

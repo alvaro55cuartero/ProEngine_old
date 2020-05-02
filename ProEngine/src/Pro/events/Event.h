@@ -1,9 +1,7 @@
 #pragma once
+#include "propch.h"
 
 #include "Pro/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Pro {
 

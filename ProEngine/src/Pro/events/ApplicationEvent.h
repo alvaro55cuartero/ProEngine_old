@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Pro/events/Event.h"
-#include <sstream>
 
 namespace Pro {
 
