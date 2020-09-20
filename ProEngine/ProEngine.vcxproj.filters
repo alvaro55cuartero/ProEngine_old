@@ -1,51 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Pro">
-      <UniqueIdentifier>{5616880B-C21F-887C-4B9B-9E7CB7A3937C}</UniqueIdentifier>
+    <Filter Include="ProEngine">
+      <UniqueIdentifier>{ECC1C597-582C-7A0E-A16A-2BB40D145863}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pro\events">
-      <UniqueIdentifier>{9A990BDF-8651-4D2C-EF58-2688DB2FE81C}</UniqueIdentifier>
+    <Filter Include="ProEngine\Core">
+      <UniqueIdentifier>{C4F98098-B0C7-749E-995B-E5C485C85003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProEngine\events">
+      <UniqueIdentifier>{70A06D0C-5C99-8C5E-85CB-71E371236C6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\Windows">
+      <UniqueIdentifier>{84B77CA1-70B0-9BF3-99E2-8078853A7BFF}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Pro.h" />
-    <ClInclude Include="src\Pro\Application.h">
-      <Filter>Pro</Filter>
+    <ClInclude Include="src\ProEngine.h" />
+    <ClInclude Include="src\ProEngine\Application.h">
+      <Filter>ProEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pro\Core.h">
-      <Filter>Pro</Filter>
+    <ClInclude Include="src\ProEngine\Core\Base.h">
+      <Filter>ProEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pro\EntryPoint.h">
-      <Filter>Pro</Filter>
+    <ClInclude Include="src\ProEngine\Core\Layer.h">
+      <Filter>ProEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pro\Log.h">
-      <Filter>Pro</Filter>
+    <ClInclude Include="src\ProEngine\Core\LayerStack.h">
+      <Filter>ProEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pro\events\ApplicationEvent.h">
-      <Filter>Pro\events</Filter>
+    <ClInclude Include="src\ProEngine\Core\Time.h">
+      <Filter>ProEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pro\events\Event.h">
-      <Filter>Pro\events</Filter>
+    <ClInclude Include="src\ProEngine\Core\Window.h">
+      <Filter>ProEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pro\events\KeyEvent.h">
-      <Filter>Pro\events</Filter>
+    <ClInclude Include="src\ProEngine\EntryPoint.h">
+      <Filter>ProEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\Pro\events\MouseEvent.h">
-      <Filter>Pro\events</Filter>
+    <ClInclude Include="src\ProEngine\Log.h">
+      <Filter>ProEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProEngine\events\ApplicationEvent.h">
+      <Filter>ProEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProEngine\events\Event.h">
+      <Filter>ProEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProEngine\events\KeyEvent.h">
+      <Filter>ProEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProEngine\events\MouseEvent.h">
+      <Filter>ProEngine\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\Windows\WindowsWindow.h">
+      <Filter>platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\propch.h" />
-    <ClInclude Include="src\Pro\Window.h" />
-    <ClInclude Include="src\platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Pro\Application.cpp">
-      <Filter>Pro</Filter>
+    <ClCompile Include="src\ProEngine\Application.cpp">
+      <Filter>ProEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pro\Log.cpp">
-      <Filter>Pro</Filter>
+    <ClCompile Include="src\ProEngine\Core\Layer.cpp">
+      <Filter>ProEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProEngine\Core\LayerStack.cpp">
+      <Filter>ProEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProEngine\Log.cpp">
+      <Filter>ProEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\Windows\WindowsWindow.cpp">
+      <Filter>platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\propch.cpp" />
-    <ClCompile Include="src\platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

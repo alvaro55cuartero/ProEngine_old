@@ -1,8 +1,10 @@
 #include "propch.h"
-#include "WindowsWindow.h"
-#include "Pro/events/ApplicationEvent.h"
-#include "Pro/events/KeyEvent.h"
-#include "Pro/events/MouseEvent.h"
+#include "platform/Windows/WindowsWindow.h"
+#include "ProEngine/events/ApplicationEvent.h"
+#include "ProEngine/events/KeyEvent.h"
+#include "ProEngine/events/MouseEvent.h"
+
+#include <glad/glad.h>
 
 namespace Pro {
 
@@ -48,6 +50,8 @@ namespace Pro {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+		PRO_CORE_ASSERT(status, "Failed to initialize GLAD!")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 		 

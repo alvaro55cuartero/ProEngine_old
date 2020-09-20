@@ -7,8 +7,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "ProEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "ProEngine/vendor/Glad/include"
 
 include "ProEngine/vendor/GLFW"
+include "ProEngine/vendor/Glad"
+
 
 project "ProEngine"
    location "ProEngine"
@@ -26,11 +29,13 @@ project "ProEngine"
    includedirs {
       "%{prj.name}/src",
       "%{prj.name}/vendor/spdlog/include",
-      "%{IncludeDir.GLFW}"
+      "%{IncludeDir.GLFW}",
+      "%{IncludeDir.Glad}"
    }
 
    links {
       "GLFW",
+      "Glad",
       "opengl32.lib"
    }
 
@@ -39,7 +44,12 @@ project "ProEngine"
       staticruntime "on"
       systemversion "latest"
 
-      defines {"PRO_PLATFORM_WINDOWS", "PRO_BUILD_DLL"}
+      defines 
+      {
+      "PRO_PLATFORM_WINDOWS", 
+      "PRO_BUILD_DLL",
+      "GLFW_INCLUDE_NONE"
+      }
 
       postbuildcommands {
          ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/SandBox")
